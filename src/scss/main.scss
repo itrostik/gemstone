@@ -1,0 +1,63 @@
+@import "reset";
+
+
+html, body{
+  background: #000;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container{
+  height: 600px;
+  width: 600px;
+  background: #fefefe;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.start-button{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #fefefe;
+  cursor: pointer;
+}
+
+* {
+  color: #fefefe;
+}
+
+.game-block{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover{
+    background: rgba(68, 68, 68, 0.2);
+  }
+}
+
+.game-active-block{
+  background: rgba(68, 68, 68, 0.5);
+  &:hover{
+    background: rgba(68, 68, 68, 0.5);
+  }
+}
+
+
+
+.game-info{
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
