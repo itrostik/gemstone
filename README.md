@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+### Cсылка: https://gemstone-game.netlify.app/
+### GemStone — жалкая пародия на игру "три в ряд"
+Если что-то не работает, то скорее всего и не должно 😂
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ну а чего вы ожидали?
 
-Currently, two official plugins are available:
+Для тех, кто зашёл на сайт и не понял, что происходит, даю инструкцию:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Нажимаете кнопку "Начать игру"
+2. Перед вами появляется поле 10х10, состоящее из самоцветов. Их вариаций всего 6 штук: <img src="public/gems/yellow.svg" width=20 height=20> <img src="public/gems/green.svg" width=20 height=20> <img src="public/gems/pink.svg" width=20 height=20> <img src="public/gems/light-blue.svg" width=20 height=20> <img src="public/gems/purple.svg" width=20 height=20> <img src="public/gems/blue.svg" width=20 height=20>
+3. У вас есть 20 ходов, ваша задача: набрать как можно больше очков.
+4. Перемещение элементов работает следующим образом: вы нажимете на первый элемент, а потом нажимаете на то место, на которое хотите его переместить. _Ну и перемещать, понятное дело, можно только на соседние клетки, ну я базу игры "три в ряд" объяснять не собираюсь_
+5. Если вы сделали какую-то комбинацию, то получаете ровно столько очков, сколько блоков вы уничтожили своей комбинацией (комбинации начинаются от трёх блоков)
+6. Если у вас каким-то образом получилось так, что невозможно получить комбинацию одним ходом, то перемешку поля я не реализовал, сорян, но я оставил возможность двигать элементы, так что там по-любому можно получить комбинацию, просто возможно придется потратить ходы для этого.
+7. После окончания ходов вы увидете итоговое количество очков и сможете попробовать снова сыграть. Вроде всё.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
