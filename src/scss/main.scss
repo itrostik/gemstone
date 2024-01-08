@@ -61,3 +61,21 @@ html, body{
   display: flex;
   justify-content: space-between;
 }
+
+.deletedBlock{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover{
+    background: rgba(68, 68, 68, 0.2);
+  }
+}
+
+.game-end{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
